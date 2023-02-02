@@ -1,0 +1,27 @@
+<div *ngFor="let card of data">
+  <ion-row class="ion-align-items-center ion-justify-content-center">
+    <ion-col size="10">
+      <ion-text>
+        <p>{{ card.label }}</p>
+      </ion-text>
+    </ion-col>
+    <ion-col size="2">
+      <ion-button color="primary" fill="clear">
+        <ion-icon name="chevron-forward-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-slides [options]="{ slidesPerView: '2', zoom: false }">
+    <ion-slide *ngFor="let content of card.data">
+      <ion-col (click)="showExerciceDetails(content.id)">
+        <ion-img style="pointer-events:none" src="https://picsum.photos/200"></ion-img>
+
+        <!-- <ion-img style="pointer-events:none" [src]="content.image"></ion-img> -->
+        <ion-text>
+          <p style="font-size: 10px;">{{ content.label }}</p>
+        </ion-text>
+      </ion-col>
+    </ion-slide>
+  </ion-slides>
+</div>

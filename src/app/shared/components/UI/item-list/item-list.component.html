@@ -1,0 +1,7 @@
+
+<ion-list [lines]="type" class="ion-margin-top">
+  <ion-item *ngFor="let item of data">
+    <ion-icon [name]="item.icon" slot="end"></ion-icon>
+    <ion-label>{{ item.label }}</ion-label>
+  </ion-item>
+</ion-list>

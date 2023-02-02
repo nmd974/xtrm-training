@@ -1,0 +1,7 @@
+{
+  "name": "xtrm-training",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
