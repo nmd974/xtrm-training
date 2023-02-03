@@ -1,3 +1,24 @@
-<p>
-  exercices-by-categories works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ data.label }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cancel()" fill="clear" color="light">
+        <ion-icon name="close-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col  *ngFor="let content of data.data" (click)="showExerciceDetails(content.id)" size="6">
+        <ion-img style="pointer-events:none" src="https://picsum.photos/200"></ion-img>
+
+        <!-- <ion-img style="pointer-events:none" [src]="content.image"></ion-img> -->
+        <ion-text>
+          <p style="font-size: 10px;text-align: left;">{{ content.label }}</p>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

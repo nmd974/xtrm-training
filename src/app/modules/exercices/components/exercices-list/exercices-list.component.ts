@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
+import { ExercicesByCategoriesComponent } from '../exercices-by-categories/exercices-by-categories.component';
 import { ExercicesDetailsComponent } from '../exercices-details/exercices-details.component';
 
 @Component({
@@ -100,6 +101,15 @@ export class ExercicesListComponent implements OnInit {
       component: ExercicesDetailsComponent,
       componentProps: {
         "id": id
+      }
+    });
+    modal.present();
+  }
+  async showExercicesByCategories(data: any){
+    const modal = await this.modalCtrl.create({
+      component: ExercicesByCategoriesComponent,
+      componentProps: {
+        "data": data
       }
     });
     modal.present();

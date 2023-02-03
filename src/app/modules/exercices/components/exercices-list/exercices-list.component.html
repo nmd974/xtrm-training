@@ -1,5 +1,5 @@
 <div *ngFor="let card of data">
-  <ion-row class="ion-align-items-center ion-justify-content-center">
+  <ion-row class="ion-align-items-center ion-justify-content-center" (click)="showExercicesByCategories(card)">
     <ion-col size="10">
       <ion-text>
         <p>{{ card.label }}</p>
@@ -19,7 +19,7 @@
 
         <!-- <ion-img style="pointer-events:none" [src]="content.image"></ion-img> -->
         <ion-text>
-          <p style="font-size: 10px;">{{ content.label }}</p>
+          <p style="font-size: 10px;text-align: left;">{{ content.label }}</p>
         </ion-text>
       </ion-col>
     </ion-slide>

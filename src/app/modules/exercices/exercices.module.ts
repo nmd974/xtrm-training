@@ -9,6 +9,7 @@ import { ExercicesPageRoutingModule } from './exercices-routing.module';
 import { ExercicesPage } from './exercices.page';
 import { ExercicesListComponent } from './components/exercices-list/exercices-list.component';
 import { ExercicesDetailsComponent } from './components/exercices-details/exercices-details.component';
+import { ExercicesByCategoriesComponent } from './components/exercices-by-categories/exercices-by-categories.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,6 @@ import { ExercicesDetailsComponent } from './components/exercices-details/exerci
     IonicModule,
     ExercicesPageRoutingModule
   ],
-  declarations: [ExercicesPage, ExercicesListComponent, ExercicesDetailsComponent]
+  declarations: [ExercicesPage, ExercicesListComponent, ExercicesDetailsComponent, ExercicesByCategoriesComponent]
 })
 export class ExercicesPageModule {}
